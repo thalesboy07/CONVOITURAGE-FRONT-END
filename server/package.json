@@ -1,0 +1,12 @@
+{
+  "name": "convoiturage-api",
+  "version": "1.0.0",
+  "description": "API serveur pour l'application de convoiturage universitaire",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["convoiturage", "api", "express"],
+  "author": "",
+  "license": "ISC"
+}

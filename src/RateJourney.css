@@ -1,0 +1,418 @@
+.rate-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e40af 0%, #0f766e 100%);
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rate-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-back-rate {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.btn-back-rate:hover {
+  background-color: white;
+  color: #1e40af;
+}
+
+.rate-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s ease-out;
+}
+
+.rate-card h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.rate-subtitle {
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Résumé du voyage */
+.journey-summary {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #1e40af;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-row .label {
+  color: #999;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.summary-row .value {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Formulaire */
+.rate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Étoiles de notation */
+.rating-stars {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.3;
+  filter: grayscale(100%);
+  padding: 0;
+}
+
+.star:hover,
+.star.active {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.rating-text {
+  text-align: center;
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-height: 1.5rem;
+}
+
+/* Textarea */
+.form-group textarea {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.char-count {
+  color: #999;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+/* Avantages */
+.rating-benefits {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #1e40af;
+}
+
+.rating-benefits h3 {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.rating-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rating-benefits li {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.rating-benefits li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1e40af;
+  font-weight: bold;
+}
+
+.rating-benefits li:last-child {
+  margin-bottom: 0;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn-submit,
+.btn-skip {
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #1e40af 0%, #0f766e 100%);
+  color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-skip {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.btn-skip:hover {
+  background-color: #e0e0e0;
+}
+
+/* Message de succès */
+.success-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.5s ease-out;
+}
+
+.success-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.success-message h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.success-details {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.success-details p {
+  margin: 0.5rem 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.success-details .route {
+  color: #1e40af;
+  font-size: 0.95rem;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-continue,
+.btn-home {
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-continue {
+  background: linear-gradient(135deg, #1e40af 0%, #0f766e 100%);
+  color: white;
+}
+
+.btn-continue:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-home {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.btn-home:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .rate-card {
+    padding: 1.5rem;
+  }
+
+  .rate-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .star {
+    font-size: 2rem;
+  }
+
+  .btn-back-rate {
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .success-message {
+    padding: 2rem 1.5rem;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+
+  .success-message h1 {
+    font-size: 1.5rem;
+  }
+
+  .rating-stars {
+    gap: 0.25rem;
+  }
+
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rate-card {
+    padding: 1rem;
+  }
+
+  .star {
+    font-size: 2.5rem;
+  }
+
+  .journey-summary {
+    padding: 1rem;
+  }
+
+  .rating-benefits {
+    padding: 0.75rem;
+  }
+
+  .rating-benefits h3 {
+    font-size: 0.85rem;
+  }
+
+  .rating-benefits li {
+    font-size: 0.85rem;
+  }
+}
